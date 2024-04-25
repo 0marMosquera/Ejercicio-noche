@@ -1,20 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package frutas;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Omar Reinaldo
- */
+
 public class Frutas {
 
     /**
      * Atributos
      */
-    final double precio=4200;
+    private double precio=4200;
     private double numeroDeKilos;
     private double valorAPagar;
     /**
@@ -29,9 +23,8 @@ public class Frutas {
 
     public double getPrecio() {
         return precio;
-        // TODO code application logic here
     }
-
+    
     public double getNumeroDeKilos() {
         return numeroDeKilos;
     }
@@ -62,7 +55,7 @@ public class Frutas {
         String numStrg= JOptionPane.showInputDialog("Ingrese Kilos");
         int numInt = Integer.parseInt(numStrg);
         Frutas cliente = new Frutas(numInt);
-        JOptionPane.showMessageDialog(null,"La compra de "+numInt "kilos, tiene un valor de"+cliente.precio*cliente.numeroDeKilos;
+        JOptionPane.showMessageDialog(null,"La compra de "+numInt "kilos, tiene un valor de"+cliente.precio.cliente.numeroDeKilos
                                            +" \n pero usted tiene un descuento por valor"+cliente.getvalor1();
                                            +" \n por lo tanto usted debe pagar "+cliente.valorAPagar(numInt));
     }
