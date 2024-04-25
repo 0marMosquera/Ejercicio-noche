@@ -11,6 +11,7 @@ public class Frutas {
     private double precio=4200;
     private double numeroDeKilos;
     private double valorAPagar;
+    private String valor1;
     /**
      * Constructor
      * @param args 
@@ -34,7 +35,7 @@ public class Frutas {
      * @param args
      */
     public double valorAPagar(int numeroDeKilos) {
-        double valor1;
+        double valor1 = 0;
         if(numeroDeKilos>0 && numeroDeKilos<=2) {
             valorAPagar= precio*numeroDeKilos;
         }else if(numeroDeKilos>2 && numeroDeKilos<=5) {
@@ -47,7 +48,7 @@ public class Frutas {
             valor1=(precio*numeroDeKilos)*0.2;
             valorAPagar=precio*numeroDeKilos-valor1;
         }
-        return valorAPagar;
+        return precio*numeroDeKilos-valor1;
     }
 
     public static void main(String[] args) {
@@ -55,7 +56,8 @@ public class Frutas {
         String numStrg= JOptionPane.showInputDialog("Ingrese Kilos");
         int numInt = Integer.parseInt(numStrg);
         Frutas cliente = new Frutas(numInt);
-        JOptionPane.showMessageDialog(null,"La compra de "+numInt "kilos, tiene un valor de"+cliente.precio.cliente.numeroDeKilos
-                                           +" \n pero usted tiene un descuento por valor"+cliente.getvalor1();
+        JOptionPane.showMessageDialog(null,"La compra de " +numInt + " kilos tiene un valor de "+cliente.precio*cliente.numeroDeKilos
+                                           +" \n pero usted tiene un descuento de "+cliente.valor1
                                            +" \n por lo tanto usted debe pagar "+cliente.valorAPagar(numInt));
     }
+}
